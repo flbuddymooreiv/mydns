@@ -55,3 +55,5 @@ int getaddrinfo(const char *node, const char *service,
         &((struct sockaddr_in *)res[0]->ai_addr)->sin_addr);
     return 0;
 }
+
+// TODO: overwrite freaddrinfo to prevent the leak of the memory.

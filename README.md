@@ -1,5 +1,5 @@
 # mydns
-This program will change the IP address for a given host in a network program by using the `LD_PRELOAD` environment for the loader.
+This program will change the IP address for a given host in a network program. This can be done by modifying `/etc/hosts` but if you do not have system administration privileges, you can use this method by utilizing the `LD_PRELOAD` environment variable for the loader.
 
 It will replace the following library calls:
 - gethostbyname2
@@ -7,15 +7,15 @@ It will replace the following library calls:
 - getaddrinfo
 
 Build the sources
-```
+```Shell
 gcc -o mydns.so -ldl -shared -fPIC mydns.c
 ```
-```
+```Shell
 gcc -o test test.c
 ```
 
 Demo:
-```
+```Shell
 user@host:~/dev/mydns$ ./test
 74.125.198.147
 74.125.198.99

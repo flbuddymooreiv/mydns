@@ -1,6 +1,6 @@
 rm test mydns.so
 gcc -ldl -shared -fPIC mydns.c -o mydns.so && \
-gcc -g -o test test.c && \
+gcc -o test test.c && \
 echo "WITHOUT PRELOAD" && \
 ./test && \
 echo && \

@@ -28,3 +28,5 @@ user@host:~/dev/mydns$ ./test
 user@host:~/dev/mydns$ LD_PRELOAD=/path/to/compiled/mydns.so ./test
 123.123.123.123
 ```
+
+Of course the hostname and the ip address could be specified in a config file, or command line parameters, but for now, simply change the strings in mydns.c to fit your needs.
